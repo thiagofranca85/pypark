@@ -1,0 +1,2 @@
+[{'placa': 'ARQ2050', 'modelo': 'FORD/KA', 'cor': 'BRANCO', 'entrada': 1205}]
+[{'placa': 'ARS2502', 'modelo': 'FORD/KA', 'cor': 'BRANCO', 'entrada': 1205}]
