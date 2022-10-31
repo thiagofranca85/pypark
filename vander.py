@@ -1,4 +1,5 @@
 from datetime import datetime
+
 import os
 
 def disponivel():
@@ -14,12 +15,12 @@ def disponivel():
     
 def entrada():
     os.system('cls')
-    dados = dict()
     carro = list()
+    dados = dict()
     dados['placa'] = str(input("Placa do Veículo: ")).upper().strip()
     dados['modelo'] = str(input("Marca/Modelo: ")).upper().strip()
     dados['cor'] = str(input("Cor do veículo: ")).upper().strip()
-    dados['entrada'] = int(input("Hora da entrada (HHMM): "))
+    dados['hrentrada'],dados['minentrada']  = str(input("Hora Entrada\nHora: ")) , str(input("Minuto: "))
     carro.append(dados.copy())
     print(carro)
     

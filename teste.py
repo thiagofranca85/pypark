@@ -1,3 +1,4 @@
+
 from vander import entrada, disponivel
 
 disponivel()
