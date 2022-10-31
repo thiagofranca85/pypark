@@ -7,11 +7,12 @@ def disponivel():
     with open('estacionamento.txt') as file:
         lines = file.readlines()
     
+    dispo = 0
     if len(lines)<10:
-        pass
+        dispo = 10 - len(lines)
     else:
         print("Não há vagas disponíveis no momento!")
-    print(f"Existem vagas disponíveis")
+    print(f"Existem {dispo} vagas disponíveis")
     
 def entrada():
     os.system('cls')
@@ -20,7 +21,7 @@ def entrada():
     dados['placa'] = str(input("Placa do Veículo: ")).upper().strip()
     dados['modelo'] = str(input("Marca/Modelo: ")).upper().strip()
     dados['cor'] = str(input("Cor do veículo: ")).upper().strip()
-    dados['hrentrada'],dados['minentrada']  = str(input("Hora Entrada\nHora: ")) , str(input("Minuto: "))
+    dados['hrentrada'],dados['minentrada']  = str(input("Entrada\nHora: ")) , str(input("Minuto: "))
     carro.append(dados.copy())
     print(carro)
     
