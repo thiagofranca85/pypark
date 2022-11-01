@@ -2,8 +2,4 @@
 {'placa': 'SDFSD5450', 'modelo': 'ASDAS5', 'cor': 'ASDASD', 'entradaHora': 15, 'entradaMinuto': 10}
 {'placa': 'ASDR5050', 'modelo': 'COROLLA', 'cor': 'CINZA', 'entradaHora': 15, 'entradaMinuto': 0}
 {'placa': 'ASDASD', 'modelo': 'ASDASD', 'cor': 'ASDASD', 'entradaHora': 20, 'entradaMinuto': 5}
-{'placa': 'ASDASD', 'modelo': 'ASDASD', 'cor': 'ASDASD', 'entradaHora': 10, 'entradaMinuto': 5}
-{'placa': 'ASDASD', 'modelo': 'ASDASD', 'cor': 'AZUL', 'entradaHora': 9, 'entradaMinuto': 20}
-{'placa': 'ASDASD', 'modelo': 'ASDASD', 'cor': 'ASDASD', 'entradaHora': 8, 'entradaMinuto': 20}
-{'placa': 'ASDASD', 'modelo': 'ASDSAD', 'cor': 'PRATATR', 'entradaHora': 11, 'entradaMinuto': 5}
 {'placa': 'ASRD5078', 'modelo': 'FORD FIESTA', 'cor': 'AMARELO', 'entradaHora': 20, 'entradaMinuto': 15}
