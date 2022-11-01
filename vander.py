@@ -16,14 +16,13 @@ def disponivel():
     
 def entrada():
     os.system('cls')
-    carro = list()
-    dados = dict()
+    dados = {}
     dados['placa'] = str(input("Placa do Veículo: ")).upper().strip()
     dados['modelo'] = str(input("Marca/Modelo: ")).upper().strip()
     dados['cor'] = str(input("Cor do veículo: ")).upper().strip()
     dados['hrentrada'],dados['minentrada']  = str(input("Entrada\nHora: ")) , str(input("Minuto: "))
-    carro.append(dados.copy())
-    print(carro)
-    
+    dados.append(dados.copy())
+    print(dados)
+   
     with open('estacionamento.txt', 'a') as arquivo:
-        arquivo.write(str(carro)+"\n")
+        arquivo.write(str(dados)+"\n")
