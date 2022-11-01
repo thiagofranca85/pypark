@@ -10,7 +10,7 @@ def menu():
     while True:
         
         #variavel com input para escolher uma das opçoes
-        escolha = input("Escolha a Opção Desejada:\n 1 => Entrada de Veículo\n 2 => Tabela de Preços\n 3 => Saída de Veículo\n 4 => Encerrar Programa\n>> ") 
+        escolha = input("Escolha a Opção Desejada:\n 1 => Entrada de Veículo\n 2 => Tabela de Preços\n 3 => Saída de Veículo\n 4 => Encerrar Programa\n>> ">> ") 
         match escolha:
             case "1":
                 os.system('cls')
@@ -34,19 +34,21 @@ def menu():
                     print("Não há vagas disponíveis no momento!")
                 
             case "2":
+                # Tabela de preços basica exibida com prints.
                 tabelaPrecos()
+                
             case "3":
                  # Informa a placa e busca no estacionamento.txt
                 placa = input("Digite a placa Ex[ABCD1234] :").strip().upper()
                 saida(placa)
+                
             case "4":
-                # Fechamento
-                # fechamento()
-                pass
-            case "5":
+                # Encerra o Programa
                 os.system('cls')
                 print("** Programa Encerrado **\n")
                 break
+                
             case _:
                 print("Opção Inválida.")
+                
 menu()
