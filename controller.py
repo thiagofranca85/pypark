@@ -14,7 +14,7 @@ def tabelaPrecos():
     os.system('cls')
     print(f"{'*'*10} Tabela de Preços {'*'*10}\n\t1a e 2a Horas = R$5\n\tHoras Adicionais = R$2\n")
 
-    # Função de saída / Efetuar pagamento
+    # Função de saída / Verificar placa e pegar valores que serao usados no calculo do pagamento
 def saida(placa):
 
     # Abre o arquivo do estacionamento
@@ -33,17 +33,21 @@ def saida(placa):
             entradaHora = aux['entradaHora']
             entradaMinuto = aux['entradaMinuto']          
             placaEncontrada = True
-            # Hora de entrada vinda do txt pelas chaves acima
+            # Hora de entrada vinda do txt pelas chaves acima >> entradaHora entradaMinuto
             horaEntrada = datetime.combine(date.today(), time(entradaHora, entradaMinuto))
             # Alterando as informações da linha txt usando NESTED Replace
             print()
             relatorio = linha.replace("{'placa':","Placa:").replace("'","").replace("modelo:","Modelo:").replace("cor:","Cor:").replace("entradaHora:","Hora Entrada >").replace(", entradaMinuto:"," :").replace("}","")
             print(relatorio)
+            # Passando a placa e a horaEntrada como Parametros pra função saidaPagamento()
+            saidaPagamento(placa, horaEntrada)
         
-    # Se não encontrar a placa mostra a mensagem abaixo
+    # Se não encontrar a placa mostra a mensagem abaixo e volta para o menu
     if placaEncontrada == False:
         print("\nPLACA NÃO ENCONTRADA.\n")
-        
+
+    # Função de pagamento / Pegando a placa(chave) e a horaEntrada caso a placa seja encontrada como parametros.
+def saidaPagamento(placa, horaEntrada):    
     while True:
         # Salva o Horário de Saída em Horas e Minutos usando o horaAtual.hour e horaAtual.minute como parametros.
         horaSaidaAtual = datetime.combine(date.today(), time(horaAtual.hour, horaAtual.minute)) 
