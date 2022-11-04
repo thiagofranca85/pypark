@@ -1,9 +1,6 @@
 from datetime import datetime, date, time
 import os
 
-# Pega Data e Horário Atual do Sistema
-horaAtual = datetime.now()
-  
     # Salva os dados em um dicionario dentro do arquivo txt.
 def entrada(carro):
     with open('estacionamento.txt', 'a') as arquivo:
@@ -49,6 +46,11 @@ def saida(placa):
     # Função de pagamento / Pegando a placa(chave) e a horaEntrada caso a placa seja encontrada como parametros.
 def saidaPagamento(placa, horaEntrada):    
     while True:
+
+        # Pega Data e Horário Atual do Sistema
+        horaAtual = datetime.now()
+        print(horaAtual)
+
         # Salva o Horário de Saída em Horas e Minutos usando o horaAtual.hour e horaAtual.minute como parametros.
         horaSaidaAtual = datetime.combine(date.today(), time(horaAtual.hour, horaAtual.minute)) 
     
