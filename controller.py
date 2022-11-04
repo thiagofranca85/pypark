@@ -49,7 +49,6 @@ def saidaPagamento(placa, horaEntrada):
 
         # Pega Data e Horário Atual do Sistema
         horaAtual = datetime.now()
-        print(horaAtual)
 
         # Salva o Horário de Saída em Horas e Minutos usando o horaAtual.hour e horaAtual.minute como parametros.
         horaSaidaAtual = datetime.combine(date.today(), time(horaAtual.hour, horaAtual.minute)) 
